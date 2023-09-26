@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Nikhil/welcome.css" />
+    <title>ICC</title>
+</head>
+
+<body>
+    <!-- <div class="currentDate"></div> -->
+    <div class="image-container">
+        <img src="/Nikhil/hc1.png" alt="Big Image" class="big-image">
+        <img src="/Nikhil/icc.png" alt="small icon" class="small-image">
+
+        <div class="bottom-left">About-Men's Cricket World Cup 2023</div>
+
+        <div id="countdown">
+            <div>
+                <span class="countdown-label">Days</span>
+                <span class="countdown-values" id="days">00</span>
+            </div>
+            <div>
+                <span class="countdown-label">Hours</span>
+                <span class="countdown-values" id="hours">00</span>
+            </div>
+            <div>
+                <span class="countdown-label">Mins</span>
+                <span class="countdown-values" id="minutes">00</span>
+            </div>
+        </div>
+
+        <div class="overlay">
+            <div id="currentDate"></div>
+        </div>
+        <!-- <script src="/script.js"></script> -->
+    </div>
+
+    <div class="box">
+        <a class="button1 " href="/logout">Logout</a>
+    </div>
+
+
+
+    <div class="content">
+        <p>
+            <span style="font-weight: 500;">
+                The ICC Men’s Cricket World Cup 2023, to be hosted by India, will be the 13th edition of the
+                50-over World Cup. India will be hosting the quadrennial tournament for the fourth time in its history,
+                and the
+                tournament is set to take place in 2023. <br>
+            </span>
+        </p>
+        <p>
+            <strong>Format</strong> <br>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                Ten teams will contest for the coveted trophy. The tournament will follow a similar format to the 2019
+                edition
+                in England and Wales, with a round-robin stage followed by the knockouts. <br>
+            </span>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                All 10 teams will compete against each other once in the round-robin stage. A victory earns the winning
+                side two
+                points in every match, while a no-result will mean the sides share a point each. <br>
+            </span>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                The top four teams at the end of the round-robin stage will qualify for the semi-finals. The winners of
+                the two
+                subsequent semi-finals will contest in the final, where the champion will be crowned. <br>
+            </span>
+        </p>
+        <p>
+            <strong>Qualification</strong> <br>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                The ICC Cricket World Cup Super League 2020-23 will be the main qualification pathway for the
+                tournament. The
+                top seven sides in the CWCSL table, along with India, who will qualify automatically as hosts, will gain
+                direct
+                entry into the tournament. <br>
+            </span>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                The five remaining teams on the CWCSL table, the top three teams from ICC Cricket World Cup League 2 and
+                the top
+                two team teams from the 2023 World Cup Qualifier Play-off will then contest in the 2023 Cricket World
+                Cup
+                Qualifier, which will decide the final two teams to qualify for the World Cup. <br>
+            </span>
+        </p>
+        <p>
+            <strong>History</strong><br>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                The 2023 ICC Men’s Cricket World Cup will be the 13th edition of the tournament. The tournament first
+                took place
+                in 1975 in England. <br>
+            </span>
+        </p>
+        <p>
+            <span style="font-weight: 500;"> </span>
+            This will be the fourth time that India will be hosting the tournament and the first time that it will be
+            the
+            sole host. They previously co-hosted the tournament in 1987, 1996 and 2011. <br>
+            </span>
+        </p>
+        <p>
+            <span style="font-weight: 500;">
+                England are the defending champions heading into the tournament, having won the trophy on home soil in
+                2019
+                after defeating New Zealand in a thrilling final at Lord’s. <br>
+            </span>
+        </p>
+        <span style="font-weight: 500;">
+            Australia are the most successful team in the history of the Cricket World Cup, having won the tournament a
+            record five times. West Indies and India have won the tournament twice, while England, Pakistan and Sri
+            Lanka
+            have each lifted the trophy once. <br>
+        </span>
+        </p>
+    </div>
+    <script>
+        // JavaScript code to update the date
+        function getCurrentDate() {
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            const currentDate = new Date();
+            const month = months[currentDate.getMonth()];
+            console.log(month);
+            const date = currentDate.getDate();
+            const day = days[currentDate.getDay()];
+            const year = currentDate.getFullYear();
+
+            return `${day}, ${date} ${month} ${year}`;
+        }
+
+        // Display the formatted date on the image
+        const dateDisplay = document.getElementById("currentDate");
+        dateDisplay.textContent = getCurrentDate();
+
+        // Set the target date for the countdown
+        const targetDate = new Date("2023-10-05T00:00:00Z").getTime();
+
+        // Update the countdown every second
+        const countdownInterval = setInterval(updateCountdown, 60000);
+
+        function updateCountdown() {
+            const currentDate = new Date().getTime();
+            const timeDifference = targetDate - currentDate;
+
+            if (timeDifference <= 0) {
+                // The countdown has ended
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "Countdown has expired!";
+                return;
+            }
+
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+            // Update the countdown values
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+        }
+
+        // Initial update of the countdown
+        updateCountdown();
+
+    </script>
+</body>
+
+</html>
