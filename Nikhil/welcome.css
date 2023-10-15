@@ -41,24 +41,33 @@ html {
   /* Smooth transition for zoom effect */
 }
 
+body .box{
+  margin: 0;
+  padding: 0;
+  /* position: absolute; */
+}
+
 .button1 {
-  padding: 5px 10px;
-  border: 2px solid #fff;
-  background: transparent;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #fff;
   position: fixed;
+  /* position: relative; */
+  top: 10px;
   right: 10px;
-  top: 5px;
-  text-decoration: none;
+  background-color: #0074d9; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
   position: absolute;
 }
 
-.button1:active {
+/* #logout-button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+/* } */
+
+/* .button1:active {
   transform: scale(0.98);
-  position: fixed;
-}
+} */
 
 /* Apply zoom-out effect on hover */
 /* .image-container:hover img {
@@ -128,7 +137,7 @@ html {
   /* background: #fff; */
   /* box-shadow: 0 0.3rem 0.6rem rgba(47, 47, 47, .42); */
   /* border-radius: 4rem; */
-  padding: 3.0rem 18.7rem 4.5rem 4.9rem;
+  padding: 0rem 18.7rem 4.5rem 4.9rem;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
   border-bottom: 2px solid rgba(218, 224, 228, .3);
@@ -155,15 +164,6 @@ html {
   color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-} */
-
-/* .box{
-  position: fixed;
-  position: relative;
-}
-.button1{
-  position: fixed;
-  position: absolute;
 } */
 
 #countdown {
@@ -194,13 +194,94 @@ html {
   /* background-color: antiquewhite; */
 }
 
-footer{
-  background-color: #000000;
-  color: white;
-  display: flex;
-  padding: 10px;
+
+/* body footer{ */
+  /* display: flex; */
+  /* flex-direction: column; */
+  
+  /* align-items: center; */
+  /* height: 100vh; */
+  /* margin: 0; */
+  /* background-color: #f0f0f0;  */
+  /* Background color of the page */
+/* } */
+
+footer {
+  background-color: #000; /* Black background color for the footer */
+  color: #fff; 
+  /* Text color for the footer */
+  padding: 8px;
+  text-align: center;
   justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  /* margin: 20px; */
+}
+
+
+/* .Record{
+  position: absolute;
+}
+
+#live{
+  margin-right: 20px;
+} */
+
+/* body {
+  margin: 0;
+  overflow: hidden;
+} */
+
+body .ticker{
+  margin: 0;
+  overflow: hidden;
+}
+.ticker-container {
+  /* overflow: hidden; */
+  white-space: nowrap;
+  position: relative;
+  /* color: black; */
+  /* width: 100%; */
+}
+
+.ticker {
+  position: relative;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  /* color: #000000; */
+  animation: scroll 20s linear infinite; /* Adjust duration as needed */
+  /* top: 109px; */
+  width: 100%;
+}
+
+.ticker ul {
+  list-style-type: none;
+  /* display: inline-block; */
+  /* padding-left: 100%; Set a large initial padding */
+  /* color: #000000; */
+}
+
+
+.ticker li {
+  display: inline;
+  /* padding: 10px; */
+  /* color: #000000; */
+}
+
+/* Add this CSS in your "ticker.css" file */
+.ticker li a {
+  color: #000; /* Set the default link color */
+  text-decoration: none; /* Remove the underline */
+  /* transition: color 0.3s; Add a smooth color transition */
+}
+
+.ticker li a:hover {
+  color: #007bff; /* Change the color on hover */
+}
+
+
+@keyframes scroll {
+  0% {
+      left: 100%; /* Start off-screen on the right */
+  }
+  100% {
+      left: -100%; /* Move off-screen on the left */
+  }
 }

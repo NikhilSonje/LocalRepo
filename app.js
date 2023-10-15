@@ -32,6 +32,10 @@ app.get('/logout', (req, res) => {
     res.sendFile(__dirname + '/logout.html');
 });
 
+app.get('/timetable', (req, res) => {
+    res.sendFile(__dirname + '/schedule.html');
+});
+
 app.post('/signup', (req, res) => {
     const { email, crpassword, copassword } = req.body;
     const newUser = { email: email, crpassword: crpassword, copassword: copassword };
@@ -58,6 +62,16 @@ app.get('/logout', (req, res) => {
             res.redirect('/logout.html');
         }
     });
+});
+
+app.get('/timetable', (req, res) => {
+    // req.session.destroy(err => {
+        if (err) {
+            console.error('Error destroying session:', err);
+        } else {
+            res.redirect('/schedule.html');
+        }
+    // });
 });
 
 app.post('/login', (req, res) => {
