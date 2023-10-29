@@ -20,6 +20,7 @@ a {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+  margin-top: -15px;
 }
 .nav,
 .nav_item {
@@ -35,6 +36,7 @@ a {
 }
 .nav_logo {
   font-size: 25px;
+  margin-left: -76px;
 }
 .nav_item {
   column-gap: 25px;
@@ -48,7 +50,12 @@ a {
   background: transparent;
   border-radius: 6px;
   cursor: pointer;
+  margin-right: -77px;
 }
+/* .nav_item button
+{
+
+} */
 .button:active {
   transform: scale(0.98);
 }
@@ -58,7 +65,7 @@ a {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url("allteam.jpg");
+  background-image: url("/Nikhil/photos/allteam.jpg");
   background-size: cover;
   background-position: center;
 }
