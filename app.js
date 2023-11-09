@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/login.html');
 });
 
-// Route to Welcome Page
+// Route to welcome Page
 app.get('/welcome', (req, res) => {
     res.sendFile(__dirname + '/welcome.html');
 });
@@ -34,6 +34,10 @@ app.get('/logout', (req, res) => {
 
 app.get('/timetable', (req, res) => {
     res.sendFile(__dirname + '/schedule.html');
+});
+
+app.get('/config', (req, res) => {
+    res.sendFile(__dirname + '/config.json');
 });
 
 app.post('/signup', (req, res) => {

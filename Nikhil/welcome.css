@@ -147,12 +147,12 @@ body .box {
   vertical-align: middle;
   text-align: justify;
   position: absolute;
-  margin-right: 96px;
+  margin-right: 100px;
   margin-left: -61px;
   margin-top: -49px;
   /* max-height: 300px; */
   overflow: auto;
-  width: 838px;
+  width: 829px;
 }
 
 /* .countdown {
@@ -315,7 +315,7 @@ body .ticker {
   top: 25px;
   left: 5px;
   margin-bottom: 10px;
-  height: 119px;
+  height: 122px;
   background-color: #d3d3d3;
   border-radius: 15px;
   border: 3px solid black;
@@ -324,18 +324,18 @@ body .ticker {
 }
 
 .image-with-name {
-  height: 32px;
+  height: 50px;
   width: 29px;
-  margin-top: 2px;
-  margin-right: 8px;
-  margin-bottom: -11px;
-  margin-left: 2px;
+  margin-top: -27px;
+  margin-right: -1px;
+  margin-bottom: 45px;
+  margin-left: -5px;
 }
 
 .image-name {
   font-weight: bold;
-  margin-top: -22px;
-  margin-left: 53px;
+  margin-top: -64px;
+  margin-left: 7px;
 }
 
 .headline {
@@ -346,7 +346,8 @@ body .ticker {
 }
 
 .fixed {
-  height: 10px;
+  height: 47px;
+  margin-bottom: -10px;
 }
 
 .all1 {
@@ -356,20 +357,20 @@ body .ticker {
 
 .total {
   margin-top: 23px;
-  margin-left: 43px;
+  margin-left: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 257px;
+  width: 335px;
 }
 
 .all {
   position: absolute;
-  width: 370px;
-  left: 899px;
+  width: 392px;
+  left: 874px;
   padding: 5px 0px 0px 0px;
   cursor: pointer;
-  margin-top: -35px;
+  margin-top: -56px;
   /* margin-left: 957px; */
   height: 930px;
   overflow: auto;
@@ -397,3 +398,13 @@ body .ticker {
   margin-top: 5px;
   margin-bottom: -17px;
 }
+
+.match-info01{
+  margin-top: -25px;
+  /* margin-left: 25px; */
+}
+
+.image-name0{
+  margin-top: -65px;
+}
+
