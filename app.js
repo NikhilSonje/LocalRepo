@@ -17,14 +17,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //for to implement css
 app.use('/Nikhil', express.static('Nikhil'));
 
-//Route to Home page
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
-
 // Route to welcome Page
 app.get('/welcome', (req, res) => {
     res.sendFile(__dirname + '/welcome.html');
+});
+
+//Route to Home page
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
 });
 
 // Route to Logout Page Page
@@ -78,7 +78,7 @@ app.get('/timetable', (req, res) => {
     // });
 });
 
-app.post('/index', (req, res) => {
+app.post('/', (req, res) => {
     const { email, copassword } = req.body;
     db.query(
         ' SELECT * FROM login WHERE email = ? and copassword = ? ',
