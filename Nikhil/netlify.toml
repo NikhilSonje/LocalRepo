@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/*"
-  to = "/welcome"
+  to = "/welcome.html"
   status = 200
