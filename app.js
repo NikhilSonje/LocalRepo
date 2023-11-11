@@ -78,7 +78,7 @@ app.get('/timetable', (req, res) => {
     // });
 });
 
-app.post('/login', (req, res) => {
+app.post('/index', (req, res) => {
     const { email, copassword } = req.body;
     db.query(
         ' SELECT * FROM login WHERE email = ? and copassword = ? ',
