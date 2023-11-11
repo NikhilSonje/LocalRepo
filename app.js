@@ -19,7 +19,7 @@ app.use('/Nikhil', express.static('Nikhil'));
 
 //Route to Home page
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/login.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 // Route to welcome Page
