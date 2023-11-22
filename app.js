@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/Nikhil', express.static('Nikhil'));
 
 // Route to welcome Page
-app.get('/welcome', (req, res) => {
+app.get('/index', (req, res) => {
     res.sendFile(__dirname + '/welcome.html');
 });
 
@@ -87,7 +87,7 @@ app.post('/index', (req, res) => {
             if (err) throw err;
 
             if (results.length > 0) {
-                res.redirect('/welcome');
+                res.redirect('/index');
             } else {
                 res.send('Your Entered Password is Incorrect');
             }
